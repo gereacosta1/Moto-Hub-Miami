@@ -22,7 +22,7 @@ export interface Category {
   children?: readonly Category[]
 }
 
-export const categories = [
+export const categories: readonly Category[] = [
   {
     id: 'helmets',
     slug: 'helmets',
@@ -122,17 +122,18 @@ export const categories = [
       },
     ],
   },
-] as const satisfies readonly Category[]
+]
 
-export const allCategories: readonly Category[] = categories.flatMap(
-  (category) => [
+export const allCategories: readonly Category[] =
+  categories.flatMap((category) => [
     category,
     ...(category.children ?? []),
-  ],
-)
+  ])
 
 export const featuredCategories: readonly Category[] =
-  allCategories.filter((category) => category.featured)
+  allCategories.filter(
+    (category) => category.featured,
+  )
 
 export function getCategoryBySlug(
   slug: string,
