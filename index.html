@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <meta
+      name="description"
+      content="Moto Hub Miami — motorcycle parts, riding gear, accessories and performance upgrades for riders in Miami and South Florida."
+    />
+
+    <meta
+      name="theme-color"
+      content="#090909"
+    />
+
+    <meta
+      name="robots"
+      content="index, follow"
+    />
+
+    <meta
+      property="og:title"
+      content="Moto Hub Miami | Motorcycle Parts & Accessories"
+    />
+
+    <meta
+      property="og:description"
+      content="Motorcycle parts, riding gear, accessories and performance upgrades in Miami, Florida."
+    />
+
+    <meta
+      property="og:type"
+      content="website"
+    />
+
+    <meta
+      property="og:image"
+      content="/moto-hub-logo.png"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="/moto-hub-logo.png"
+    />
+
+    <title>
+      Moto Hub Miami | Motorcycle Parts & Accessories
+    </title>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <!--
+      Static Netlify form definition.
+      The visible form is rendered by React in Contact.tsx.
+    -->
+    <form
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      hidden
+    >
+      <input
+        type="hidden"
+        name="form-name"
+        value="contact"
+      />
+
+      <input
+        type="text"
+        name="name"
+      />
+
+      <input
+        type="email"
+        name="email"
+      />
+
+      <input
+        type="tel"
+        name="phone"
+      />
+
+      <select name="topic">
+        <option value="product">
+          Product inquiry
+        </option>
+
+        <option value="fitment">
+          Fitment help
+        </option>
+
+        <option value="availability">
+          Availability
+        </option>
+
+        <option value="general">
+          General question
+        </option>
+      </select>
+
+      <input
+        type="text"
+        name="motorcycle"
+      />
+
+      <input
+        type="text"
+        name="product"
+      />
+
+      <textarea name="message"></textarea>
+    </form>
+
+    <script
+      type="module"
+      src="/src/main.tsx"
+    ></script>
+  </body>
+</html>
