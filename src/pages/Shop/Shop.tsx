@@ -58,13 +58,6 @@ function matchesVehicle(
     return true
   }
 
-  if (
-    !product.compatibility ||
-    product.compatibility.length === 0
-  ) {
-    return false
-  }
-
   const requestedYear = year
     ? Number(year)
     : null
@@ -75,55 +68,95 @@ function matchesVehicle(
   const requestedModel =
     normalizeValue(model)
 
-  return product.compatibility.some(
-    (vehicle) => {
-      const makeMatches =
-        !requestedMake ||
-        normalizeValue(vehicle.make) ===
-          requestedMake
+  if (
+    product.compatibility &&
+    product.compatibility.length > 0
+  ) {
+    return product.compatibility.some(
+      (vehicle) => {
+        const makeMatches =
+          !requestedMake ||
+          normalizeValue(vehicle.make) ===
+            requestedMake
 
-      const modelMatches =
-        !requestedModel ||
-        normalizeValue(vehicle.model) ===
-          requestedModel
+        const modelMatches =
+          !requestedModel ||
+          normalizeValue(vehicle.model) ===
+            requestedModel
 
-      let yearMatches = true
+        let yearMatches = true
 
-      if (
-        requestedYear !== null &&
-        Number.isFinite(requestedYear)
-      ) {
         if (
-          vehicle.years &&
-          vehicle.years.length > 0
+          requestedYear !== null &&
+          Number.isFinite(requestedYear)
         ) {
-          yearMatches =
-            vehicle.years.includes(
-              requestedYear,
-            )
-        } else {
-          const afterStart =
-            vehicle.yearFrom === undefined ||
-            requestedYear >=
-              vehicle.yearFrom
+          if (
+            vehicle.years &&
+            vehicle.years.length > 0
+          ) {
+            yearMatches =
+              vehicle.years.includes(
+                requestedYear,
+              )
+          } else {
+            const afterStart =
+              vehicle.yearFrom === undefined ||
+              requestedYear >=
+                vehicle.yearFrom
 
-          const beforeEnd =
-            vehicle.yearTo === undefined ||
-            requestedYear <=
-              vehicle.yearTo
+            const beforeEnd =
+              vehicle.yearTo === undefined ||
+              requestedYear <=
+                vehicle.yearTo
 
-          yearMatches =
-            afterStart &&
-            beforeEnd
+            yearMatches =
+              afterStart &&
+              beforeEnd
+          }
         }
-      }
 
-      return (
-        makeMatches &&
-        modelMatches &&
-        yearMatches
-      )
-    },
+        return (
+          makeMatches &&
+          modelMatches &&
+          yearMatches
+        )
+      },
+    )
+  }
+
+  const searchableText =
+    normalizeValue(
+      [
+        product.name,
+        product.brand,
+        product.shortDescription,
+        product.description,
+        ...(product.tags ?? []),
+      ].join(' '),
+    )
+
+  const yearMatches =
+    !year ||
+    searchableText.includes(
+      normalizeValue(year),
+    )
+
+  const makeMatches =
+    !make ||
+    searchableText.includes(
+      requestedMake,
+    )
+
+  const modelMatches =
+    !model ||
+    searchableText.includes(
+      requestedModel,
+    )
+
+  return (
+    yearMatches &&
+    makeMatches &&
+    modelMatches
   )
 }
 
@@ -397,10 +430,9 @@ function Shop({
           </h1>
 
           <p>
-            Explore performance parts,
-            upgrades and accessories for
-            European vehicles built for
-            drivers who expect more.
+            Explore motorcycle parts, riding gear,
+            accessories and performance upgrades
+            from leading brands.
           </p>
         </div>
       </section>
@@ -455,7 +487,7 @@ function Shop({
                       event.target.value,
                     )
                   }
-                  placeholder="Search products, brands..."
+                  placeholder="Search products, brands, models..."
                   aria-label="Search products"
                 />
 
@@ -584,7 +616,7 @@ function Shop({
               <div className="shop__vehicle-filter">
                 <div>
                   <span>
-                    Vehicle fitment
+                    Motorcycle fitment
                   </span>
 
                   <strong>
@@ -650,8 +682,8 @@ function Shop({
                     We&apos;re preparing the
                     Bavarian Euro Performance
                     catalog. Check back soon for
-                    European performance parts,
-                    upgrades and accessories.
+                    motorcycle parts, gear and
+                    performance upgrades.
                   </p>
 
                   <Link
@@ -678,7 +710,7 @@ function Shop({
 
                   <p>
                     Try changing your search,
-                    category or vehicle fitment
+                    category or motorcycle fitment
                     to see more products.
                   </p>
 

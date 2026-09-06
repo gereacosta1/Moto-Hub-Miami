@@ -1,6 +1,6 @@
 import {
   ArrowRight,
-  Car,
+  Bike,
   Search,
 } from 'lucide-react'
 import {
@@ -15,23 +15,24 @@ import {
 
 import './VehicleFinder.css'
 
-const europeanMakes = [
-  'Alfa Romeo',
-  'Audi',
-  'Bentley',
+const motorcycleMakes = [
+  'Aprilia',
   'BMW',
-  'Ferrari',
-  'Jaguar',
-  'Lamborghini',
-  'Land Rover',
-  'Maserati',
-  'McLaren',
-  'Mercedes-Benz',
-  'MINI',
-  'Porsche',
-  'Rolls-Royce',
-  'Volkswagen',
-  'Volvo',
+  'Can-Am',
+  'Ducati',
+  'GasGas',
+  'Harley-Davidson',
+  'Honda',
+  'Husqvarna',
+  'Indian',
+  'Kawasaki',
+  'KTM',
+  'Moto Guzzi',
+  'MV Agusta',
+  'Royal Enfield',
+  'Suzuki',
+  'Triumph',
+  'Yamaha',
 ] as const
 
 function VehicleFinder() {
@@ -105,13 +106,13 @@ function VehicleFinder() {
         <div className="vehicle-finder__content">
           <div className="vehicle-finder__heading">
             <span className="vehicle-finder__eyebrow">
-              <Car
+              <Bike
                 size={17}
                 strokeWidth={1.9}
                 aria-hidden="true"
               />
 
-              Vehicle Fitment Finder
+              Motorcycle Fitment Finder
             </span>
 
             <h2
@@ -122,14 +123,14 @@ function VehicleFinder() {
               <br />
 
               <span>
-                FIT YOUR CAR.
+                FIT YOUR BIKE.
               </span>
             </h2>
 
             <p className="vehicle-finder__description">
-              Enter your vehicle details and find
-              performance parts and upgrades designed
-              for your exact application.
+              Enter your motorcycle details and find
+              parts, accessories and performance upgrades
+              for your specific bike.
             </p>
           </div>
 
@@ -137,7 +138,7 @@ function VehicleFinder() {
             <div className="vehicle-finder__panel-header">
               <div>
                 <span className="vehicle-finder__panel-label">
-                  Your vehicle
+                  Your motorcycle
                 </span>
 
                 <strong>
@@ -196,18 +197,18 @@ function VehicleFinder() {
                   <input
                     id="vehicle-make"
                     type="text"
-                    list="european-makes"
+                    list="motorcycle-makes"
                     value={make}
                     onChange={(event) =>
                       setMake(event.target.value)
                     }
-                    placeholder="e.g. BMW"
+                    placeholder="e.g. Yamaha"
                     autoComplete="off"
                     required
                   />
 
-                  <datalist id="european-makes">
-                    {europeanMakes.map(
+                  <datalist id="motorcycle-makes">
+                    {motorcycleMakes.map(
                       (manufacturer) => (
                         <option
                           key={manufacturer}
@@ -232,7 +233,7 @@ function VehicleFinder() {
                     onChange={(event) =>
                       setModel(event.target.value)
                     }
-                    placeholder="e.g. M3"
+                    placeholder="e.g. YZF-R6"
                     autoComplete="off"
                     required
                   />
