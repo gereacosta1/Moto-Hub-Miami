@@ -29,7 +29,7 @@ function FeaturedProducts({
         aria-hidden="true"
       >
         <span className="featured-products__background-text">
-          PERFORMANCE
+          BEP
         </span>
 
         <span className="featured-products__accent-line" />
@@ -39,7 +39,7 @@ function FeaturedProducts({
         <div className="featured-products__header">
           <div className="featured-products__heading">
             <span className="section__eyebrow">
-              Featured inventory
+              Featured performance
             </span>
 
             <h2
@@ -48,15 +48,18 @@ function FeaturedProducts({
             >
               PARTS WORTH
               <br />
-              <span>THE UPGRADE.</span>
+
+              <span>
+                THE UPGRADE.
+              </span>
             </h2>
           </div>
 
           <div className="featured-products__intro">
             <p>
-              Discover selected motorcycle parts, riding gear
-              and performance upgrades from our current
-              inventory.
+              Discover selected performance parts, upgrades
+              and accessories for European vehicles from
+              Bavarian Euro Performance.
             </p>
 
             <Link
@@ -124,9 +127,9 @@ function FeaturedProducts({
               </h3>
 
               <p>
-                Our featured selection is being prepared.
-                Explore the shop or check back soon for the
-                latest parts and gear.
+                Our European performance inventory is being
+                prepared. Explore the shop or check back
+                soon for new parts and upgrades.
               </p>
             </div>
 

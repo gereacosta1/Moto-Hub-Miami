@@ -1,3 +1,5 @@
+import type { CategorySlug } from '../data/categories'
+
 export type ProductAvailability =
   | 'in-stock'
   | 'low-stock'
@@ -28,8 +30,9 @@ export interface Product {
 
   name: string
   brand: string
-  category: string
-  subcategory?: string
+
+  category: CategorySlug
+  subcategory?: CategorySlug
 
   shortDescription: string
   description: string
@@ -49,6 +52,7 @@ export interface Product {
   bestSeller?: boolean
 
   specifications?: ProductSpecification[]
+
   compatibility?: VehicleCompatibility[]
 
   tags?: string[]

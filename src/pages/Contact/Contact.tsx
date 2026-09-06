@@ -13,7 +13,10 @@ import {
   useMemo,
   useState,
 } from 'react'
-import { Link, useSearchParams } from 'react-router'
+import {
+  Link,
+  useSearchParams,
+} from 'react-router'
 
 import './Contact.css'
 
@@ -101,7 +104,7 @@ function Contact() {
           aria-hidden="true"
         >
           <span className="contact-page__hero-word">
-            MIAMI
+            BEP
           </span>
 
           <span className="contact-page__hero-circle contact-page__hero-circle--one" />
@@ -113,21 +116,24 @@ function Contact() {
 
         <div className="container contact-page__hero-container">
           <span className="contact-page__eyebrow">
-            Moto Hub Miami
+            Bavarian Euro Performance
           </span>
 
           <h1>
-            TALK TO
+            LET&apos;S TALK
             <br />
-            <span>THE HUB.</span>
+
+            <span>
+              PERFORMANCE.
+            </span>
           </h1>
 
           <p>
             Need help finding a part, checking
-            fitment or choosing your next
-            upgrade? Send us the details and
-            we&apos;ll help point you in the
-            right direction.
+            fitment or choosing your next upgrade?
+            Send us your vehicle details and
+            we&apos;ll help point you in the right
+            direction.
           </p>
         </div>
       </section>
@@ -141,18 +147,21 @@ function Contact() {
               </span>
 
               <h2>
-                RIDERS HELPING
+                BUILT AROUND
                 <br />
-                <span>RIDERS.</span>
+
+                <span>
+                  YOUR VEHICLE.
+                </span>
               </h2>
 
               <p className="contact-page__information-copy">
-                Tell us what you&apos;re
-                looking for, what you ride and
-                any fitment details you already
-                have. The more information you
-                provide, the easier it is to
-                narrow down the right option.
+                Tell us what you&apos;re looking
+                for, what you drive and any fitment
+                details you already have. The more
+                information you provide, the easier
+                it is to narrow down the right
+                option.
               </p>
 
               <div className="contact-page__details">
@@ -177,8 +186,8 @@ function Contact() {
                     </strong>
 
                     <p>
-                      Serving riders across
-                      South Florida.
+                      Serving European vehicle
+                      owners across South Florida.
                     </p>
                   </div>
                 </div>
@@ -205,8 +214,8 @@ function Contact() {
 
                     <p>
                       Ask about products,
-                      compatibility and
-                      motorcycle upgrades.
+                      compatibility and performance
+                      upgrades for your vehicle.
                     </p>
                   </div>
                 </div>
@@ -233,8 +242,8 @@ function Contact() {
 
                     <p>
                       Submit your request and
-                      include as much detail as
-                      possible.
+                      include as much vehicle and
+                      product detail as possible.
                     </p>
                   </div>
                 </div>
@@ -253,7 +262,7 @@ function Contact() {
 
                 <Link
                   to="/shop"
-                  aria-label="Browse Moto Hub Miami products"
+                  aria-label="Browse Bavarian Euro Performance products"
                 >
                   <ArrowRight
                     size={19}
@@ -370,6 +379,7 @@ function Contact() {
                   <div className="contact-page__field">
                     <label htmlFor="contact-name">
                       Name
+
                       <span aria-hidden="true">
                         *
                       </span>
@@ -388,6 +398,7 @@ function Contact() {
                   <div className="contact-page__field">
                     <label htmlFor="contact-email">
                       Email
+
                       <span aria-hidden="true">
                         *
                       </span>
@@ -422,6 +433,7 @@ function Contact() {
                   <div className="contact-page__field">
                     <label htmlFor="contact-topic">
                       Topic
+
                       <span aria-hidden="true">
                         *
                       </span>
@@ -464,21 +476,22 @@ function Contact() {
                 </div>
 
                 <div className="contact-page__field">
-                  <label htmlFor="contact-motorcycle">
-                    Motorcycle
+                  <label htmlFor="contact-vehicle">
+                    Vehicle
                   </label>
 
                   <input
-                    id="contact-motorcycle"
-                    name="motorcycle"
+                    id="contact-vehicle"
+                    name="vehicle"
                     type="text"
-                    placeholder="e.g. 2024 Yamaha MT-07"
+                    placeholder="e.g. 2021 BMW M3"
                   />
                 </div>
 
                 <div className="contact-page__field">
                   <label htmlFor="contact-message">
                     Message
+
                     <span aria-hidden="true">
                       *
                     </span>
@@ -525,7 +538,7 @@ function Contact() {
                 <p className="contact-page__form-note">
                   By submitting this form,
                   you&apos;re sending an inquiry
-                  to Moto Hub Miami.
+                  to Bavarian Euro Performance.
                 </p>
               </form>
             </div>

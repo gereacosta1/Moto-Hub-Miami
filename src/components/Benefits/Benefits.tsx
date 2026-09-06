@@ -10,12 +10,12 @@ import './Benefits.css'
 
 const benefits = [
   {
-    id: 'rider-focused',
+    id: 'performance-focused',
     number: '01',
     icon: Wrench,
-    title: 'Built for riders',
+    title: 'Built for performance',
     description:
-      'A focused selection of motorcycle parts, gear and performance upgrades without the clutter of a generic marketplace.',
+      'A focused selection of European performance parts, upgrades and accessories without the clutter of a generic marketplace.',
   },
   {
     id: 'fitment',
@@ -23,7 +23,7 @@ const benefits = [
     icon: Search,
     title: 'Find the right fit',
     description:
-      'Use your motorcycle details, categories and product information to narrow down the parts that make sense for your bike.',
+      'Use your vehicle details, categories and product information to narrow down the parts that make sense for your exact application.',
   },
   {
     id: 'miami',
@@ -31,7 +31,7 @@ const benefits = [
     icon: MapPin,
     title: 'Miami based',
     description:
-      'A local-first motorcycle shopping experience built around riders in Miami and across South Florida.',
+      'A local-first performance experience built around European vehicle owners in Miami and across South Florida.',
   },
   {
     id: 'clear-shopping',
@@ -39,7 +39,7 @@ const benefits = [
     icon: CheckCircle2,
     title: 'Shop with clarity',
     description:
-      'Straightforward pricing, availability and specifications help you compare products before making your choice.',
+      'Straightforward pricing, availability, fitment and specifications help you compare products before making your choice.',
   },
 ] as const
 
@@ -53,7 +53,7 @@ function Benefits() {
         <div className="benefits__header">
           <div>
             <span className="section__eyebrow">
-              Why Moto Hub
+              Why BEP
             </span>
 
             <h2
@@ -62,15 +62,18 @@ function Benefits() {
             >
               MORE THAN
               <br />
-              <span>JUST PARTS.</span>
+
+              <span>
+                JUST PARTS.
+              </span>
             </h2>
           </div>
 
           <div className="benefits__header-copy">
             <p>
-              Built around motorcycles, riders and the
-              details that matter when choosing your next
-              upgrade.
+              Built around European vehicles, performance
+              and the details that matter when choosing
+              your next upgrade.
             </p>
 
             <Link
@@ -79,7 +82,9 @@ function Benefits() {
             >
               Need help choosing?
 
-              <span aria-hidden="true">↗</span>
+              <span aria-hidden="true">
+                ↗
+              </span>
             </Link>
           </div>
         </div>

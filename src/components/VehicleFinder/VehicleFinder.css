@@ -10,17 +10,18 @@
   overflow: hidden;
 
   color: var(--color-white);
+
   background:
     radial-gradient(
       circle at 15% 50%,
-      rgba(255, 22, 22, 0.12),
+      rgba(0, 102, 255, 0.14),
       transparent 34%
     ),
     linear-gradient(
       115deg,
       #050505 0%,
-      #111111 55%,
-      #080808 100%
+      #0c1016 55%,
+      #07090d 100%
     );
 }
 
@@ -33,10 +34,13 @@
   min-height: 580px;
 
   display: grid;
+
   grid-template-columns:
     minmax(0, 0.85fr)
     minmax(500px, 1.15fr);
+
   align-items: center;
+
   gap: 85px;
 
   padding-block: 95px;
@@ -58,45 +62,63 @@
 
 .vehicle-finder__background::before {
   position: absolute;
+
   top: -30%;
   right: -12%;
 
   width: 620px;
+
   aspect-ratio: 1;
 
   content: "";
 
-  border: 1px solid rgba(255, 255, 255, 0.045);
+  border:
+    1px solid rgba(255, 255, 255, 0.045);
+
   border-radius: 50%;
 }
 
 .vehicle-finder__background::after {
   position: absolute;
+
   top: -18%;
   right: -5%;
 
   width: 420px;
+
   aspect-ratio: 1;
 
   content: "";
 
-  border: 1px solid rgba(255, 22, 22, 0.12);
+  border:
+    1px solid rgba(0, 102, 255, 0.2);
+
   border-radius: 50%;
 }
 
 .vehicle-finder__background-word {
   position: absolute;
+
   left: -0.05em;
   bottom: -0.17em;
 
-  color: rgba(255, 255, 255, 0.025);
+  color: rgba(255, 255, 255, 0.026);
 
   font-family: var(--font-display);
-  font-size: clamp(13rem, 29vw, 31rem);
+
+  font-size:
+    clamp(
+      13rem,
+      29vw,
+      31rem
+    );
+
   font-style: italic;
   font-weight: 900;
+
   line-height: 0.7;
-  letter-spacing: -0.1em;
+
+  letter-spacing: -0.08em;
 
   user-select: none;
 }
@@ -149,16 +171,20 @@
 
   display: inline-flex;
   align-items: center;
+
   gap: 9px;
 
   margin-bottom: 21px;
 
-  color: var(--color-primary);
+  color: #0877ff;
 
   font-size: 0.72rem;
   font-weight: 850;
+
   line-height: 1;
+
   letter-spacing: 0.12em;
+
   text-transform: uppercase;
 }
 
@@ -167,15 +193,24 @@
 
   color: var(--color-white);
 
-  font-size: clamp(2.8rem, 5.2vw, 5.4rem);
+  font-size:
+    clamp(
+      2.8rem,
+      5.2vw,
+      5.4rem
+    );
+
   font-weight: 900;
+
   line-height: 0.91;
+
   letter-spacing: -0.065em;
+
   text-transform: uppercase;
 }
 
 .vehicle-finder__title span {
-  color: var(--color-primary);
+  color: #0877ff;
 }
 
 .vehicle-finder__description {
@@ -183,9 +218,10 @@
 
   margin-top: 26px;
 
-  color: rgba(255, 255, 255, 0.56);
+  color: rgba(255, 255, 255, 0.58);
 
   font-size: 1rem;
+
   line-height: 1.75;
 }
 
@@ -201,18 +237,20 @@
 
   padding: 28px;
 
-  border: 1px solid rgba(255, 255, 255, 0.13);
+  border:
+    1px solid rgba(255, 255, 255, 0.13);
+
   border-radius: var(--radius-md);
 
   background:
     linear-gradient(
       145deg,
       rgba(255, 255, 255, 0.105),
-      rgba(255, 255, 255, 0.045)
+      rgba(0, 86, 190, 0.045)
     );
 
   box-shadow:
-    0 30px 80px rgba(0, 0, 0, 0.32);
+    0 30px 80px rgba(0, 0, 0, 0.34);
 
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
@@ -220,6 +258,7 @@
 
 .vehicle-finder__panel::before {
   position: absolute;
+
   top: 0;
   left: 28px;
 
@@ -228,13 +267,20 @@
 
   content: "";
 
-  background: var(--color-primary);
+  background:
+    linear-gradient(
+      90deg,
+      #0877ff,
+      #004dac
+    );
 }
 
 .vehicle-finder__panel-header {
   display: flex;
+
   align-items: flex-start;
   justify-content: space-between;
+
   gap: 25px;
 
   padding-bottom: 24px;
@@ -245,17 +291,22 @@
 
 .vehicle-finder__panel-header > div {
   display: flex;
+
   flex-direction: column;
+
   gap: 7px;
 }
 
 .vehicle-finder__panel-label {
-  color: var(--color-primary);
+  color: #0877ff;
 
   font-size: 0.66rem;
   font-weight: 850;
+
   line-height: 1;
+
   letter-spacing: 0.13em;
+
   text-transform: uppercase;
 }
 
@@ -264,6 +315,7 @@
 
   font-size: 1.15rem;
   font-weight: 750;
+
   line-height: 1.2;
 }
 
@@ -272,6 +324,7 @@
 
   font-size: 0.75rem;
   font-weight: 800;
+
   letter-spacing: 0.13em;
 }
 
@@ -282,10 +335,12 @@
 
 .vehicle-finder__form {
   display: grid;
+
   grid-template-columns:
     minmax(110px, 0.65fr)
     minmax(150px, 1fr)
     minmax(150px, 1fr);
+
   gap: 12px;
 
   margin-top: 27px;
@@ -304,8 +359,11 @@
 
   font-size: 0.67rem;
   font-weight: 800;
+
   line-height: 1;
+
   letter-spacing: 0.07em;
+
   text-transform: uppercase;
 }
 
@@ -320,13 +378,17 @@
 
   padding: 0 15px;
 
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border:
+    1px solid rgba(255, 255, 255, 0.14);
+
   border-radius: var(--radius-sm);
 
   outline: none;
 
   color: var(--color-white);
-  background: rgba(0, 0, 0, 0.26);
+
+  background:
+    rgba(0, 0, 0, 0.28);
 
   font-size: 0.9rem;
   font-weight: 600;
@@ -343,6 +405,7 @@
 
 .vehicle-finder__control select option {
   color: var(--color-black);
+
   background: var(--color-white);
 }
 
@@ -352,17 +415,19 @@
 
 .vehicle-finder__control input:hover,
 .vehicle-finder__control select:hover {
-  border-color: rgba(255, 255, 255, 0.25);
+  border-color:
+    rgba(255, 255, 255, 0.26);
 }
 
 .vehicle-finder__control input:focus,
 .vehicle-finder__control select:focus {
-  border-color: var(--color-primary);
+  border-color: #0877ff;
 
-  background: rgba(0, 0, 0, 0.4);
+  background:
+    rgba(0, 0, 0, 0.42);
 
   box-shadow:
-    0 0 0 3px rgba(255, 22, 22, 0.1);
+    0 0 0 3px rgba(0, 102, 255, 0.13);
 }
 
 
@@ -378,20 +443,34 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
   gap: 10px;
 
   margin-top: 4px;
 
+  border: 0;
+
   border-radius: var(--radius-sm);
 
   color: var(--color-white);
-  background: var(--color-primary);
+
+  background:
+    linear-gradient(
+      135deg,
+      #0877ff 0%,
+      #0058cc 100%
+    );
 
   font-size: 0.76rem;
   font-weight: 850;
+
   line-height: 1;
+
   letter-spacing: 0.065em;
+
   text-transform: uppercase;
+
+  cursor: pointer;
 
   transition:
     transform var(--transition-fast),
@@ -410,10 +489,15 @@
 .vehicle-finder__submit:hover:not(:disabled) {
   transform: translateY(-2px);
 
-  background: var(--color-primary-hover);
+  background:
+    linear-gradient(
+      135deg,
+      #1983ff 0%,
+      #0065e8 100%
+    );
 
   box-shadow:
-    0 14px 28px rgba(255, 22, 22, 0.2);
+    0 14px 28px rgba(0, 102, 255, 0.28);
 }
 
 .vehicle-finder__submit:hover:not(:disabled)
@@ -438,11 +522,14 @@ svg:last-child {
 
 .vehicle-finder__footer {
   display: flex;
+
   align-items: center;
   justify-content: space-between;
+
   gap: 20px;
 
   margin-top: 21px;
+
   padding-top: 20px;
 
   border-top:
@@ -457,12 +544,17 @@ svg:last-child {
 
 .vehicle-finder__footer a {
   display: inline-flex;
+
   align-items: center;
+
   gap: 6px;
 
   color: rgba(255, 255, 255, 0.76);
 
   font-weight: 750;
+
+  transition:
+    color var(--transition-fast);
 }
 
 .vehicle-finder__footer a svg {
@@ -471,7 +563,7 @@ svg:last-child {
 }
 
 .vehicle-finder__footer a:hover {
-  color: var(--color-primary);
+  color: #0877ff;
 }
 
 .vehicle-finder__footer a:hover svg {
@@ -493,11 +585,13 @@ svg:last-child {
   }
 }
 
+
 @media (max-width: 900px) {
   .vehicle-finder__content {
     min-height: 0;
 
     grid-template-columns: 1fr;
+
     gap: 45px;
 
     padding-block: 78px;
@@ -522,7 +616,12 @@ svg:last-child {
   .vehicle-finder__background-word {
     bottom: 15%;
 
-    font-size: clamp(12rem, 43vw, 24rem);
+    font-size:
+      clamp(
+        12rem,
+        43vw,
+        24rem
+      );
   }
 }
 
@@ -543,7 +642,12 @@ svg:last-child {
   }
 
   .vehicle-finder__title {
-    font-size: clamp(2.55rem, 13vw, 4.2rem);
+    font-size:
+      clamp(
+        2.55rem,
+        13vw,
+        4.2rem
+      );
   }
 
   .vehicle-finder__description {
@@ -568,6 +672,7 @@ svg:last-child {
 
   .vehicle-finder__form {
     grid-template-columns: 1fr;
+
     gap: 14px;
 
     margin-top: 22px;
@@ -581,7 +686,9 @@ svg:last-child {
 
   .vehicle-finder__footer {
     align-items: flex-start;
+
     flex-direction: column;
+
     gap: 9px;
   }
 
@@ -627,6 +734,7 @@ svg:last-child {
 @media (prefers-reduced-motion: reduce) {
   .vehicle-finder__submit,
   .vehicle-finder__submit svg,
+  .vehicle-finder__footer a,
   .vehicle-finder__footer a svg,
   .vehicle-finder__control input,
   .vehicle-finder__control select {

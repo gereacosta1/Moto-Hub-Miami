@@ -9,9 +9,9 @@ import { Link } from 'react-router'
 import './Hero.css'
 
 const heroCategories = [
-  'Parts',
-  'Gear',
   'Performance',
+  'Engine',
+  'Suspension',
   'Accessories',
 ] as const
 
@@ -32,7 +32,7 @@ function Hero() {
         <span className="hero__outline hero__outline--two" />
 
         <span className="hero__background-word">
-          MIAMI
+          BEP
         </span>
       </div>
 
@@ -43,7 +43,7 @@ function Hero() {
               <span className="hero__eyebrow-line" />
 
               <span>
-                Motorcycle Parts · Miami
+                European Performance · Miami
               </span>
             </div>
 
@@ -51,18 +51,18 @@ function Hero() {
               id="hero-title"
               className="hero__title"
             >
-              BUILT FOR
+              ENGINEERED FOR
               <br />
 
               <span className="hero__title-accent">
-                THE RIDE.
+                PERFORMANCE.
               </span>
             </h1>
 
             <p className="hero__description">
-              Motorcycle parts, riding gear and performance
-              upgrades for riders who want more from every
-              mile.
+              Performance parts and upgrades for European
+              vehicles built for drivers who expect more
+              from every mile.
             </p>
 
             <div className="hero__actions">
@@ -70,7 +70,7 @@ function Hero() {
                 to="/shop"
                 className="hero__primary"
               >
-                Shop parts
+                Shop performance
 
                 <ArrowRight
                   size={18}
@@ -96,7 +96,7 @@ function Hero() {
 
           <div
             className="hero__visual"
-            aria-label="Moto Hub Miami motorcycle parts and performance"
+            aria-label="Bavarian Euro Performance parts and upgrades"
           >
             <div
               className="hero__visual-lines"
@@ -109,7 +109,7 @@ function Hero() {
 
             <div className="hero__visual-top">
               <span>
-                MHM / 01
+                BEP / 01
               </span>
 
               <span>
@@ -119,15 +119,15 @@ function Hero() {
 
             <div className="hero__brand-mark">
               <span className="hero__brand-moto">
-                MOTO
+                BAVARIAN
               </span>
 
               <span className="hero__brand-hub">
-                HUB
+                EURO
               </span>
 
               <span className="hero__brand-miami">
-                MIAMI
+                PERFORMANCE
               </span>
             </div>
 
@@ -138,14 +138,14 @@ function Hero() {
                 </span>
 
                 <strong>
-                  Riders
+                  Performance
                 </strong>
               </div>
 
               <Link
                 to="/shop"
                 className="hero__visual-link"
-                aria-label="Explore Moto Hub Miami products"
+                aria-label="Explore Bavarian Euro Performance products"
               >
                 <ArrowUpRight
                   size={22}
@@ -196,7 +196,31 @@ function Hero() {
       >
         <div className="hero__ticker-track">
           <span>
-            PARTS
+            PERFORMANCE
+          </span>
+
+          <i />
+
+          <span>
+            EUROPEAN PARTS
+          </span>
+
+          <i />
+
+          <span>
+            ENGINE
+          </span>
+
+          <i />
+
+          <span>
+            SUSPENSION
+          </span>
+
+          <i />
+
+          <span>
+            BAVARIAN EURO PERFORMANCE
           </span>
 
           <i />
@@ -208,49 +232,25 @@ function Hero() {
           <i />
 
           <span>
-            RIDING GEAR
+            EUROPEAN PARTS
           </span>
 
           <i />
 
           <span>
-            ACCESSORIES
+            ENGINE
           </span>
 
           <i />
 
           <span>
-            MOTO HUB MIAMI
+            SUSPENSION
           </span>
 
           <i />
 
           <span>
-            PARTS
-          </span>
-
-          <i />
-
-          <span>
-            PERFORMANCE
-          </span>
-
-          <i />
-
-          <span>
-            RIDING GEAR
-          </span>
-
-          <i />
-
-          <span>
-            ACCESSORIES
-          </span>
-
-          <i />
-
-          <span>
-            MOTO HUB MIAMI
+            BAVARIAN EURO PERFORMANCE
           </span>
 
           <i />

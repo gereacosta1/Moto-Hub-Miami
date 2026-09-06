@@ -26,14 +26,22 @@ function NotFound() {
       <div className="container not-found__container">
         <div className="not-found__content">
           <div className="not-found__code">
-            <span>ERROR</span>
-            <strong>404</strong>
+            <span>
+              ERROR
+            </span>
+
+            <strong>
+              404
+            </strong>
           </div>
 
           <h1>
             WRONG
             <br />
-            <span>TURN.</span>
+
+            <span>
+              TURN.
+            </span>
           </h1>
 
           <p>
@@ -78,7 +86,7 @@ function NotFound() {
 
           <div className="not-found__footer">
             <span>
-              MOTO HUB MIAMI
+              BAVARIAN EURO PERFORMANCE
             </span>
 
             <i aria-hidden="true" />

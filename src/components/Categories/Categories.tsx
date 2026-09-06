@@ -8,6 +8,7 @@ import './Categories.css'
 function Categories() {
   return (
     <section
+      id="categories"
       className="categories section"
       aria-labelledby="categories-title"
     >
@@ -22,17 +23,20 @@ function Categories() {
               id="categories-title"
               className="section__title categories__title"
             >
-              EVERYTHING FOR
+              PERFORMANCE FOR
               <br />
-              <span>YOUR NEXT RIDE.</span>
+
+              <span>
+                EVERY BUILD.
+              </span>
             </h2>
           </div>
 
           <div className="categories__intro">
             <p>
-              Explore premium motorcycle gear, performance
-              parts and accessories selected for riders who
-              expect more from every mile.
+              Explore performance parts, upgrades and
+              accessories for European vehicles selected
+              for drivers who demand more from their cars.
             </p>
 
             <Link

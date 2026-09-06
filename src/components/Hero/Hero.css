@@ -15,8 +15,8 @@
     linear-gradient(
       112deg,
       #050505 0%,
-      #0b0b0b 48%,
-      #111111 100%
+      #0a0d12 48%,
+      #0d1219 100%
     );
 }
 
@@ -74,12 +74,12 @@
   background:
     radial-gradient(
       circle,
-      rgba(255, 22, 22, 0.14) 0%,
-      rgba(255, 22, 22, 0.055) 34%,
+      rgba(0, 102, 255, 0.2) 0%,
+      rgba(0, 102, 255, 0.08) 34%,
       transparent 70%
     );
 
-  filter: blur(5px);
+  filter: blur(6px);
 }
 
 .hero__outline {
@@ -104,7 +104,7 @@
   width: 470px;
   height: 470px;
 
-  border-color: rgba(255, 22, 22, 0.12);
+  border-color: rgba(0, 102, 255, 0.18);
 }
 
 .hero__background-word {
@@ -112,14 +112,14 @@
   left: -0.055em;
   bottom: -0.11em;
 
-  color: rgba(255, 255, 255, 0.018);
+  color: rgba(255, 255, 255, 0.022);
 
   font-family: var(--font-display);
   font-size: clamp(12rem, 30vw, 34rem);
   font-style: italic;
   font-weight: 900;
   line-height: 0.67;
-  letter-spacing: -0.1em;
+  letter-spacing: -0.08em;
 
   user-select: none;
 }
@@ -133,9 +133,10 @@
   position: relative;
   z-index: 2;
 
-  min-height: calc(
-    100svh - var(--header-height) - 50px
-  );
+  min-height:
+    calc(
+      100svh - var(--header-height) - 50px
+    );
 
   display: flex;
   flex-direction: column;
@@ -155,7 +156,9 @@
   grid-template-columns:
     minmax(0, 1.15fr)
     minmax(360px, 0.85fr);
+
   align-items: center;
+
   gap: clamp(45px, 7vw, 105px);
 
   flex: 1;
@@ -181,7 +184,7 @@
 
   margin-bottom: 25px;
 
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.66);
 
   font-size: 0.71rem;
   font-weight: 800;
@@ -194,7 +197,7 @@
   width: 38px;
   height: 2px;
 
-  background: var(--color-primary);
+  background: #0563dc;
 }
 
 .hero__title {
@@ -214,7 +217,7 @@
 
   display: inline-block;
 
-  color: var(--color-primary);
+  color: #0877ff;
 }
 
 .hero__title-accent::after {
@@ -227,7 +230,7 @@
 
   content: "";
 
-  background: var(--color-primary);
+  background: #0563dc;
 
   transform: skewX(-28deg);
   transform-origin: right center;
@@ -238,7 +241,7 @@
 
   margin-top: 31px;
 
-  color: rgba(255, 255, 255, 0.56);
+  color: rgba(255, 255, 255, 0.58);
 
   font-size: clamp(1rem, 1.4vw, 1.12rem);
   line-height: 1.72;
@@ -287,7 +290,13 @@
 
 .hero__primary {
   color: var(--color-white);
-  background: var(--color-primary);
+
+  background:
+    linear-gradient(
+      135deg,
+      #0877ff 0%,
+      #0058cc 100%
+    );
 }
 
 .hero__primary svg {
@@ -298,10 +307,15 @@
 .hero__primary:hover {
   transform: translateY(-2px);
 
-  background: var(--color-primary-hover);
+  background:
+    linear-gradient(
+      135deg,
+      #1983ff 0%,
+      #0064e6 100%
+    );
 
   box-shadow:
-    0 15px 32px rgba(255, 22, 22, 0.2);
+    0 15px 32px rgba(0, 102, 255, 0.28);
 }
 
 .hero__primary:hover svg {
@@ -324,6 +338,7 @@
   color: var(--color-white);
 
   border-color: rgba(255, 255, 255, 0.34);
+
   background: rgba(255, 255, 255, 0.085);
 }
 
@@ -348,19 +363,18 @@
 
   padding: 26px;
 
-  border:
-    1px solid rgba(255, 255, 255, 0.13);
+  border: 1px solid rgba(255, 255, 255, 0.13);
   border-radius: var(--radius-md);
 
   background:
     linear-gradient(
       145deg,
-      rgba(255, 255, 255, 0.09),
-      rgba(255, 255, 255, 0.02)
+      rgba(255, 255, 255, 0.085),
+      rgba(0, 59, 130, 0.035)
     );
 
   box-shadow:
-    0 35px 80px rgba(0, 0, 0, 0.32);
+    0 35px 80px rgba(0, 0, 0, 0.34);
 
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
@@ -384,8 +398,8 @@
   background:
     radial-gradient(
       circle,
-      rgba(255, 22, 22, 0.24),
-      rgba(255, 22, 22, 0.06) 43%,
+      rgba(0, 102, 255, 0.32),
+      rgba(0, 102, 255, 0.08) 43%,
       transparent 72%
     );
 }
@@ -405,7 +419,7 @@
     linear-gradient(
       180deg,
       transparent,
-      rgba(0, 0, 0, 0.32)
+      rgba(0, 0, 0, 0.36)
     );
 }
 
@@ -463,7 +477,7 @@
   justify-content: space-between;
   gap: 20px;
 
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.42);
 
   font-size: 0.63rem;
   font-weight: 800;
@@ -480,44 +494,69 @@
   position: relative;
   z-index: 2;
 
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  width: 100%;
 
-  transform: skewX(-6deg);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+  transform: skewX(-4deg);
 
   font-family: var(--font-display);
-  font-size: clamp(4.2rem, 7vw, 7.1rem);
   font-style: italic;
   font-weight: 900;
-  line-height: 0.76;
-  letter-spacing: -0.09em;
+  text-transform: uppercase;
 }
 
 .hero__brand-moto {
+  display: block;
+
+  max-width: 100%;
+
   color: var(--color-white);
+
+  font-size: clamp(2.9rem, 5vw, 4.8rem);
+  line-height: 0.86;
+  letter-spacing: -0.065em;
+
+  white-space: nowrap;
 }
 
 .hero__brand-hub {
-  margin-left: 0.08em;
+  display: inline-block;
 
-  padding: 0.03em 0.11em 0.09em;
+  margin-top: 8px;
+  padding: 4px 13px 8px;
 
   color: var(--color-white);
-  background: var(--color-primary);
+
+  background:
+    linear-gradient(
+      135deg,
+      #0877ff,
+      #0059cc
+    );
+
+  font-size: clamp(3.9rem, 6.7vw, 6.4rem);
+  line-height: 0.78;
+  letter-spacing: -0.07em;
 }
 
 .hero__brand-miami {
+  display: block;
+
   width: 100%;
 
-  margin-top: 0.16em;
-  padding-left: 0.03em;
+  margin-top: 14px;
+  padding-left: 2px;
 
-  color: rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.25);
 
-  font-size: 0.45em;
+  font-size: clamp(1rem, 1.7vw, 1.45rem);
   line-height: 1;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
+
+  white-space: nowrap;
 }
 
 
@@ -542,7 +581,7 @@
 }
 
 .hero__visual-label {
-  color: rgba(255, 255, 255, 0.38);
+  color: rgba(255, 255, 255, 0.4);
 
   font-size: 0.66rem;
   font-weight: 700;
@@ -583,9 +622,9 @@
 .hero__visual-link:hover {
   transform: rotate(6deg);
 
-  border-color: var(--color-primary);
+  border-color: #0877ff;
 
-  background: var(--color-primary);
+  background: #0563dc;
 }
 
 
@@ -610,6 +649,7 @@
 .hero__categories {
   display: flex;
   align-items: center;
+
   gap: clamp(22px, 4vw, 54px);
 }
 
@@ -628,7 +668,7 @@
 }
 
 .hero__categories small {
-  color: var(--color-primary);
+  color: #0877ff;
 
   font-size: 0.58rem;
   font-weight: 850;
@@ -677,7 +717,13 @@
   border-top:
     1px solid rgba(255, 255, 255, 0.08);
 
-  background: var(--color-primary);
+  background:
+    linear-gradient(
+      90deg,
+      #004aaf 0%,
+      #0877ff 50%,
+      #004aaf 100%
+    );
 }
 
 .hero__ticker-track {
@@ -713,7 +759,7 @@
 
   border-radius: 50%;
 
-  background: rgba(255, 255, 255, 0.62);
+  background: rgba(255, 255, 255, 0.65);
 }
 
 @keyframes heroTicker {
@@ -744,11 +790,27 @@
     max-width: 410px;
   }
 
-  .hero__brand-mark {
+  .hero__brand-moto {
     font-size: clamp(
-      3.8rem,
-      6.5vw,
-      6rem
+      2.6rem,
+      4.5vw,
+      4rem
+    );
+  }
+
+  .hero__brand-hub {
+    font-size: clamp(
+      3.5rem,
+      6vw,
+      5.4rem
+    );
+  }
+
+  .hero__brand-miami {
+    font-size: clamp(
+      0.85rem,
+      1.5vw,
+      1.2rem
     );
   }
 }
@@ -772,6 +834,7 @@
 
   .hero__main {
     grid-template-columns: 1fr;
+
     gap: 55px;
   }
 
@@ -780,29 +843,48 @@
   }
 
   .hero__title {
-    font-size: clamp(
-      4.4rem,
-      13vw,
-      7rem
-    );
+    font-size:
+      clamp(
+        4.4rem,
+        13vw,
+        7rem
+      );
   }
 
   .hero__visual {
     width: 100%;
     max-width: none;
+
     aspect-ratio: 1.75;
 
     justify-self: stretch;
   }
 
-  .hero__brand-mark {
-    width: fit-content;
+  .hero__brand-moto {
+    font-size:
+      clamp(
+        3.2rem,
+        8vw,
+        5.6rem
+      );
+  }
 
-    font-size: clamp(
-      4rem,
-      12vw,
-      7rem
-    );
+  .hero__brand-hub {
+    font-size:
+      clamp(
+        4rem,
+        10vw,
+        6.5rem
+      );
+  }
+
+  .hero__brand-miami {
+    font-size:
+      clamp(
+        1rem,
+        2.5vw,
+        1.45rem
+      );
   }
 
   .hero__bottom {
@@ -843,11 +925,12 @@
   }
 
   .hero__title {
-    font-size: clamp(
-      3.5rem,
-      18vw,
-      5.5rem
-    );
+    font-size:
+      clamp(
+        3.25rem,
+        17vw,
+        5.3rem
+      );
 
     line-height: 0.84;
   }
@@ -883,12 +966,35 @@
     border-radius: 12px;
   }
 
-  .hero__brand-mark {
-    font-size: clamp(
-      3.5rem,
-      18vw,
-      5.6rem
-    );
+  .hero__brand-moto {
+    font-size:
+      clamp(
+        2.5rem,
+        12vw,
+        4.2rem
+      );
+  }
+
+  .hero__brand-hub {
+    font-size:
+      clamp(
+        3.4rem,
+        16vw,
+        5.4rem
+      );
+  }
+
+  .hero__brand-miami {
+    margin-top: 12px;
+
+    font-size:
+      clamp(
+        0.78rem,
+        3.7vw,
+        1.1rem
+      );
+
+    letter-spacing: 0.12em;
   }
 
   .hero__visual-link {
@@ -954,12 +1060,33 @@
     font-size: 0.58rem;
   }
 
-  .hero__brand-mark {
-    font-size: clamp(
-      3.15rem,
-      17vw,
-      4.7rem
-    );
+  .hero__brand-moto {
+    font-size:
+      clamp(
+        2.1rem,
+        11vw,
+        3.3rem
+      );
+  }
+
+  .hero__brand-hub {
+    font-size:
+      clamp(
+        3rem,
+        15vw,
+        4.6rem
+      );
+  }
+
+  .hero__brand-miami {
+    font-size:
+      clamp(
+        0.72rem,
+        3.5vw,
+        0.95rem
+      );
+
+    letter-spacing: 0.1em;
   }
 
   .hero__categories > span:nth-child(2) {

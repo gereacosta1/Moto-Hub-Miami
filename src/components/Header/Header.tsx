@@ -24,10 +24,13 @@ function Header() {
             to="/"
             className="header__logo"
             onClick={closeMenu}
-            aria-label="RIDE Parts home"
+            aria-label="Bavarian Euro Performance home"
           >
-            <span>RIDE</span>
-            <strong>PARTS</strong>
+            <img
+              src="/new-logo.jpeg"
+              alt="BEP - Bavarian Euro Performance"
+              className="header__logo-image"
+            />
           </Link>
 
           <nav

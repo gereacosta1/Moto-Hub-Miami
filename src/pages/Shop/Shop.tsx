@@ -109,10 +109,12 @@ function matchesVehicle(
 
           const beforeEnd =
             vehicle.yearTo === undefined ||
-            requestedYear <= vehicle.yearTo
+            requestedYear <=
+              vehicle.yearTo
 
           yearMatches =
-            afterStart && beforeEnd
+            afterStart &&
+            beforeEnd
         }
       }
 
@@ -163,11 +165,15 @@ function Shop({
     return Array.from(
       new Set(
         products
-          .map((product) => product.category)
+          .map(
+            (product) =>
+              product.category,
+          )
           .filter(Boolean),
       ),
-    ).sort((a, b) =>
-      a.localeCompare(b),
+    ).sort(
+      (a, b) =>
+        a.localeCompare(b),
     )
   }, [products])
 
@@ -236,10 +242,16 @@ function Shop({
             case 'featured':
             default: {
               const featuredDifference =
-                Number(Boolean(b.featured)) -
-                Number(Boolean(a.featured))
+                Number(
+                  Boolean(b.featured),
+                ) -
+                Number(
+                  Boolean(a.featured),
+                )
 
-              if (featuredDifference !== 0) {
+              if (
+                featuredDifference !== 0
+              ) {
                 return featuredDifference
               }
 
@@ -263,7 +275,9 @@ function Shop({
                   Boolean(a.bestSeller),
                 )
 
-              if (sellerDifference !== 0) {
+              if (
+                sellerDifference !== 0
+              ) {
                 return sellerDifference
               }
 
@@ -285,7 +299,11 @@ function Shop({
     ])
 
   const vehicleFilterActive =
-    Boolean(year || make || model)
+    Boolean(
+      year ||
+      make ||
+      model,
+    )
 
   const filtersActive =
     Boolean(
@@ -299,7 +317,9 @@ function Shop({
     value: string,
   ) {
     const next =
-      new URLSearchParams(searchParams)
+      new URLSearchParams(
+        searchParams,
+      )
 
     if (value) {
       next.set(name, value)
@@ -323,7 +343,9 @@ function Shop({
 
   function clearFilters() {
     const next =
-      new URLSearchParams(searchParams)
+      new URLSearchParams(
+        searchParams,
+      )
 
     next.delete('q')
     next.delete('category')
@@ -337,7 +359,9 @@ function Shop({
 
   function clearVehicle() {
     const next =
-      new URLSearchParams(searchParams)
+      new URLSearchParams(
+        searchParams,
+      )
 
     next.delete('year')
     next.delete('make')
@@ -354,27 +378,29 @@ function Shop({
           aria-hidden="true"
         >
           <span>
-            SHOP
+            BEP
           </span>
         </div>
 
         <div className="container shop__hero-container">
           <span className="shop__eyebrow">
-            Moto Hub Miami
+            Bavarian Euro Performance
           </span>
 
           <h1>
             FIND YOUR
             <br />
+
             <span>
               NEXT UPGRADE.
             </span>
           </h1>
 
           <p>
-            Explore motorcycle parts, riding
-            gear, accessories and performance
-            upgrades built around your ride.
+            Explore performance parts,
+            upgrades and accessories for
+            European vehicles built for
+            drivers who expect more.
           </p>
         </div>
       </section>
@@ -440,6 +466,7 @@ function Shop({
                     aria-label="Clear search"
                     onClick={() => {
                       setSearchDraft('')
+
                       updateParameter(
                         'q',
                         '',
@@ -557,7 +584,7 @@ function Shop({
               <div className="shop__vehicle-filter">
                 <div>
                   <span>
-                    Fitment filter
+                    Vehicle fitment
                   </span>
 
                   <strong>
@@ -621,10 +648,10 @@ function Shop({
 
                   <p>
                     We&apos;re preparing the
-                    Moto Hub Miami catalog.
-                    Check back soon for parts,
-                    gear and performance
-                    upgrades.
+                    Bavarian Euro Performance
+                    catalog. Check back soon for
+                    European performance parts,
+                    upgrades and accessories.
                   </p>
 
                   <Link
@@ -651,9 +678,8 @@ function Shop({
 
                   <p>
                     Try changing your search,
-                    category or motorcycle
-                    fitment to see more
-                    products.
+                    category or vehicle fitment
+                    to see more products.
                   </p>
 
                   {filtersActive && (

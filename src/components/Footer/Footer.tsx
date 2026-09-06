@@ -19,7 +19,7 @@ function Footer() {
         aria-hidden="true"
       >
         <span className="footer__background-word">
-          MOTO
+          BEP
         </span>
 
         <span className="footer__background-line" />
@@ -31,26 +31,25 @@ function Footer() {
             <Link
               to="/"
               className="footer__logo"
-              aria-label="Moto Hub Miami home"
+              aria-label="Bavarian Euro Performance home"
             >
               <span className="footer__logo-moto">
-                MOTO
+                BEP
               </span>
 
               <strong className="footer__logo-hub">
-                HUB
+                EURO
               </strong>
 
               <small>
-                MIAMI
+                PERFORMANCE
               </small>
             </Link>
 
             <p>
-              Motorcycle parts, riding gear,
-              accessories and performance upgrades
-              built around riders in Miami and
-              South Florida.
+              European performance parts, upgrades
+              and accessories for drivers who expect
+              more from their vehicles.
             </p>
 
             <div className="footer__location">
@@ -123,9 +122,10 @@ function Footer() {
             </h3>
 
             <p>
-              Looking for a specific part or
-              unsure about fitment? Send us your
-              motorcycle details.
+              Looking for a specific part or unsure
+              about fitment? Send us your vehicle
+              details and we&apos;ll help you find
+              the right upgrade.
             </p>
 
             <Link
@@ -138,7 +138,7 @@ function Footer() {
                 aria-hidden="true"
               />
 
-              Contact Moto Hub
+              Contact BEP
 
               <ArrowUpRight
                 size={16}
@@ -152,19 +152,19 @@ function Footer() {
         <div className="footer__middle">
           <div className="footer__statement">
             <span>
-              Parts
-            </span>
-
-            <i aria-hidden="true" />
-
-            <span>
               Performance
             </span>
 
             <i aria-hidden="true" />
 
             <span>
-              Riding Gear
+              European Parts
+            </span>
+
+            <i aria-hidden="true" />
+
+            <span>
+              Upgrades
             </span>
 
             <i aria-hidden="true" />
@@ -177,12 +177,12 @@ function Footer() {
 
         <div className="footer__bottom">
           <span>
-            © {currentYear} Moto Hub Miami.
+            © {currentYear} Bavarian Euro Performance.
             All rights reserved.
           </span>
 
           <span>
-            Motorcycle Parts &amp; Accessories
+            European Performance Parts &amp; Accessories
           </span>
         </div>
       </div>

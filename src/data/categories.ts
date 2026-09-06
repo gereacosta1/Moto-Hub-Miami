@@ -1,16 +1,19 @@
 export type CategorySlug =
-  | 'helmets'
-  | 'riding-gear'
-  | 'footwear'
-  | 'gloves'
-  | 'protection'
+  | 'performance-parts'
+  | 'engine'
+  | 'intake'
   | 'exhaust'
-  | 'parts-accessories'
-  | 'filters'
-  | 'disc-guards'
+  | 'handling'
   | 'suspension'
-  | 'seats'
-  | 'luggage-cases'
+  | 'brakes'
+  | 'wheels-tires'
+  | 'styling'
+  | 'exterior'
+  | 'interior'
+  | 'maintenance-accessories'
+  | 'maintenance'
+  | 'electronics'
+  | 'accessories'
 
 export interface Category {
   id: string
@@ -24,101 +27,129 @@ export interface Category {
 
 export const categories: readonly Category[] = [
   {
-    id: 'helmets',
-    slug: 'helmets',
-    name: 'Helmets',
+    id: 'performance-parts',
+    slug: 'performance-parts',
+    name: 'Performance Parts',
+    shortName: 'Performance',
     description:
-      'Street, touring and performance helmets built for protection, comfort and everyday riding.',
-    featured: true,
-  },
-
-  {
-    id: 'riding-gear',
-    slug: 'riding-gear',
-    name: 'Riding Gear',
-    description:
-      'Premium riding essentials designed for protection, comfort and performance on every ride.',
+      'Performance upgrades engineered to improve power, response and the overall driving experience.',
     featured: true,
 
     children: [
       {
-        id: 'footwear',
-        slug: 'footwear',
-        name: 'Footwear',
+        id: 'engine',
+        slug: 'engine',
+        name: 'Engine',
         description:
-          'Motorcycle boots and riding shoes engineered for protection, grip and all-day comfort.',
+          'Engine components and performance upgrades designed to increase reliability, response and power.',
       },
       {
-        id: 'gloves',
-        slug: 'gloves',
-        name: 'Gloves',
+        id: 'intake',
+        slug: 'intake',
+        name: 'Intake',
         description:
-          'Street and performance riding gloves with protection, control and dependable grip.',
+          'Performance intake systems, filters and airflow upgrades designed to improve engine breathing and response.',
       },
       {
-        id: 'protection',
-        slug: 'protection',
-        name: 'Protection',
+        id: 'exhaust',
+        slug: 'exhaust',
+        name: 'Exhaust',
         description:
-          'Protective motorcycle gear designed to add confidence without sacrificing mobility.',
+          'Performance exhaust systems and components built for improved flow, sound and reduced restriction.',
       },
     ],
   },
 
   {
-    id: 'exhaust',
-    slug: 'exhaust',
-    name: 'Exhaust',
+    id: 'handling',
+    slug: 'handling',
+    name: 'Handling',
     description:
-      'Slip-ons, full systems and exhaust upgrades built for sound, performance and reduced weight.',
+      'Suspension, braking and chassis upgrades designed to improve control, stability and driving dynamics.',
     featured: true,
-  },
-
-  {
-    id: 'parts-accessories',
-    slug: 'parts-accessories',
-    name: 'Parts & Accessories',
-    shortName: 'Parts',
-    description:
-      'Performance parts and practical upgrades for improving, protecting and personalizing your motorcycle.',
 
     children: [
-      {
-        id: 'filters',
-        slug: 'filters',
-        name: 'Filters',
-        description:
-          'Air, oil and fuel filtration components for dependable performance and engine protection.',
-      },
-      {
-        id: 'disc-guards',
-        slug: 'disc-guards',
-        name: 'Disc Guards',
-        description:
-          'Brake disc protection designed for demanding street, trail and off-road riding.',
-      },
       {
         id: 'suspension',
         slug: 'suspension',
         name: 'Suspension',
         description:
-          'Suspension components and upgrades for improved control, handling and ride quality.',
+          'Coilovers, springs, shocks and suspension components for improved handling, stance and ride quality.',
       },
       {
-        id: 'seats',
-        slug: 'seats',
-        name: 'Seats',
+        id: 'brakes',
+        slug: 'brakes',
+        name: 'Brakes',
         description:
-          'Replacement and performance motorcycle seats designed for comfort, support and style.',
+          'Performance brake components designed to improve stopping power, consistency and pedal response.',
       },
       {
-        id: 'luggage-cases',
-        slug: 'luggage-cases',
-        name: 'Luggage & Cases',
-        shortName: 'Luggage',
+        id: 'wheels-tires',
+        slug: 'wheels-tires',
+        name: 'Wheels & Tires',
+        shortName: 'Wheels',
         description:
-          'Motorcycle luggage and storage solutions for commuting, touring and everyday riding.',
-        featured: true,
+          'Performance wheel and tire solutions designed for improved grip, fitment and vehicle appearance.',
+      },
+    ],
+  },
+
+  {
+    id: 'styling',
+    slug: 'styling',
+    name: 'Styling',
+    description:
+      'Exterior and interior upgrades designed to give your European vehicle a more distinctive appearance.',
+    featured: true,
+
+    children: [
+      {
+        id: 'exterior',
+        slug: 'exterior',
+        name: 'Exterior',
+        description:
+          'Exterior styling and aerodynamic upgrades including spoilers, splitters, diffusers and body components.',
+      },
+      {
+        id: 'interior',
+        slug: 'interior',
+        name: 'Interior',
+        description:
+          'Interior upgrades and accessories designed to improve style, comfort and the driver experience.',
+      },
+    ],
+  },
+
+  {
+    id: 'maintenance-accessories',
+    slug: 'maintenance-accessories',
+    name: 'Maintenance & Accessories',
+    shortName: 'Accessories',
+    description:
+      'Maintenance components, electronics and accessories for keeping your vehicle performing at its best.',
+    featured: true,
+
+    children: [
+      {
+        id: 'maintenance',
+        slug: 'maintenance',
+        name: 'Maintenance',
+        description:
+          'Filters, service components and replacement parts for dependable maintenance and long-term performance.',
+      },
+      {
+        id: 'electronics',
+        slug: 'electronics',
+        name: 'Electronics',
+        description:
+          'Electronic upgrades, sensors and performance technology for modern European vehicles.',
+      },
+      {
+        id: 'accessories',
+        slug: 'accessories',
+        name: 'Accessories',
+        description:
+          'Practical and performance-focused accessories for personalizing and upgrading your vehicle.',
       },
     ],
   },

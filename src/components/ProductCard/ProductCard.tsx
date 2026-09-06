@@ -86,10 +86,15 @@ function ProductCard({
           ) : (
             <div
               className="product-card__image-placeholder"
-              aria-hidden="true"
+              aria-label="Bavarian Euro Performance"
             >
-              <span>MOTO</span>
-              <strong>HUB</strong>
+              <span>
+                BEP
+              </span>
+
+              <strong>
+                EURO
+              </strong>
             </div>
           )}
 
@@ -183,6 +188,7 @@ function ProductCard({
             aria-label={`View details for ${brand} ${name}`}
           >
             View
+
             <ArrowUpRight
               size={15}
               strokeWidth={2}

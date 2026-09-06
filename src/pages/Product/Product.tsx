@@ -247,15 +247,15 @@ function Product({
                     aria-label={`${brand} ${name}`}
                   >
                     <span>
-                      MOTO
+                      BEP
                     </span>
 
                     <strong>
-                      HUB
+                      EURO
                     </strong>
 
                     <small>
-                      MIAMI
+                      PERFORMANCE
                     </small>
                   </div>
                 )}
@@ -487,8 +487,9 @@ function Product({
               <h2>
                 BUILT FOR
                 <br />
+
                 <span>
-                  THE RIDE.
+                  PERFORMANCE.
                 </span>
               </h2>
 
@@ -634,10 +635,11 @@ function Product({
                     </div>
 
                     <p>
-                      Contact Moto Hub Miami
-                      for additional product
-                      details, specifications
-                      or fitment information.
+                      Contact Bavarian Euro
+                      Performance for additional
+                      product details,
+                      specifications or fitment
+                      information.
                     </p>
 
                     <Link
